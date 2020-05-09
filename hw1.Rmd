@@ -1,0 +1,41 @@
+---
+title: "mid01"
+author: "鐘彩菱105014431"
+date: "2020/5/9"
+output: html_document
+---
+```{r}
+library(ggplot2)
+library(tidyverse)
+data("mpg")
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#1
+mpg %>% ggplot(aes(x = displ,y = hwy)) +geom_point(aes(col = class))
+```
+
+
+```{r}
+#2
+mpg %>% ggplot(aes(x = displ,y = hwy)) +geom_point(aes(col = class)) +geom_smooth(method = "lm")
+
+```
+
+
+```{r}
+#3
+
+mpg %>% ggplot(aes(x = displ,y = hwy))+geom_point(aes(col = class)) +geom_smooth(aes(x = displ, y = hwy, linetype = drv))
+
+```
+
+
+
+
+```{r}
+
+```
